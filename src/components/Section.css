@@ -1,0 +1,21 @@
+.section {
+  padding: var(--spacing-3xl) 0;
+}
+
+.section--white {
+  background-color: var(--color-background);
+}
+
+.section--alt {
+  background-color: var(--color-background-alt);
+}
+
+.section--accent {
+  background-color: var(--color-background-accent);
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: var(--spacing-2xl) 0;
+  }
+}
