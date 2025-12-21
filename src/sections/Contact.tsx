@@ -24,7 +24,7 @@ const Contact: React.FC = () => {
               </div>
               <h4>Volunteer</h4>
               <p>
-                Help organize health kit drives, create awareness materials, or assist 
+                Help organize health kit drives, create awareness materials, or assist
                 with community outreach events. Perfect for students and healthcare enthusiasts.
               </p>
             </Card>
@@ -35,7 +35,7 @@ const Contact: React.FC = () => {
               </div>
               <h4>Partner With Us</h4>
               <p>
-                Healthcare professionals and clinics can collaborate with us to share 
+                Healthcare professionals and clinics can collaborate with us to share
                 expertise, resources, and mentor aspiring health workers.
               </p>
             </Card>
@@ -46,7 +46,7 @@ const Contact: React.FC = () => {
               </div>
               <h4>Attend Events</h4>
               <p>
-                Join our workshops, health awareness sessions, and professional networking 
+                Join our workshops, health awareness sessions, and professional networking
                 events to learn and connect with the community.
               </p>
             </Card>
@@ -56,22 +56,47 @@ const Contact: React.FC = () => {
             <Card className="contact__form-card">
               <h3>Ready to make an impact?</h3>
               <p>Contact us to learn more about volunteer opportunities and partnerships.</p>
-              
+
               <div className="contact__info">
                 <div className="contact-info-item">
                   <Mail size={24} />
                   <div>
                     <strong>Email Us</strong>
-                    <a href="mailto:info@interlakehealth.org">info@interlakehealth.org</a>
+                    <a href="mailto:Interlakehealthinitiative@gmail.com">Interlakehealthinitiative@gmail.com</a>
                   </div>
                 </div>
 
                 <div className="contact-info-item">
                   <Instagram size={24} />
                   <div>
-                    <strong>Follow Us</strong>
-                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                      @interlakehealth
+                    <strong>Follow Us on Instagram</strong>
+                    <a href="https://www.instagram.com/interlake_health_initiative?igsh=MTM2M2Zvb2hicjJkag==" target="_blank" rel="noopener noreferrer">
+                      @interlake_health_initiative
+                    </a>
+                  </div>
+                </div>
+
+                <div className="contact-info-item">
+                  <div style={{ width: 24, height: 24, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    {/* Using SVG for TikTok to ensure it works without guessing lucide version */}
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+                    </svg>
+                  </div>
+                  <div>
+                    <strong>Follow Us on TikTok</strong>
+                    <a href="https://www.tiktok.com/@interlake_health_?_r=1&_t=ZT-922OeuNC60F" target="_blank" rel="noopener noreferrer">
+                      @interlake_health_
                     </a>
                   </div>
                 </div>
