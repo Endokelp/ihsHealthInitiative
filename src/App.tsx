@@ -1,7 +1,7 @@
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Hero from './sections/Hero';
-import About from './sections/About';
+import Impact from './sections/Impact';
 import Programs from './sections/Programs';
 import Contact from './sections/Contact';
 import './App.css';
@@ -12,7 +12,7 @@ function App() {
       <Header />
       <main>
         <Hero />
-        <About />
+        <Impact />
         <Programs />
         <Contact />
       </main>

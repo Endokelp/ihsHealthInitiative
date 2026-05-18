@@ -1,0 +1,124 @@
+.impact-section .container {
+  max-width: var(--container-max-width);
+}
+
+.impact {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: var(--spacing-2xl);
+  align-items: center;
+}
+
+.impact__visual {
+  position: relative;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.impact__kit {
+  position: absolute;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-border);
+}
+
+.impact__kit--layer-3 {
+  width: 72%;
+  aspect-ratio: 1;
+  background: var(--color-background-accent);
+  transform: rotate(-8deg) translate(-12%, 8%);
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.impact__kit--layer-2 {
+  width: 82%;
+  aspect-ratio: 1;
+  background: var(--color-accent-muted);
+  transform: rotate(4deg) translate(8%, -4%);
+  z-index: 2;
+}
+
+.impact__kit--layer-1 {
+  position: relative;
+  width: 88%;
+  max-width: 280px;
+  aspect-ratio: 1;
+  background: var(--color-surface);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  border-color: var(--color-primary-light);
+}
+
+.impact__kit-count {
+  font-family: var(--font-family-display);
+  font-size: clamp(4rem, 10vw, 5.5rem);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-secondary);
+  line-height: 1;
+}
+
+.impact__kit-label {
+  margin-top: var(--spacing-xs);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+.impact__content h2 {
+  max-width: 18ch;
+  margin-bottom: var(--spacing-md);
+}
+
+.impact__content p strong {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+.impact__list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-lg);
+}
+
+.impact__list li {
+  position: relative;
+  padding-left: 1.25rem;
+  font-size: var(--font-size-base);
+  color: var(--color-text-primary);
+  font-weight: var(--font-weight-medium);
+}
+
+.impact__list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-secondary);
+}
+
+@media (max-width: 768px) {
+  .impact {
+    grid-template-columns: 1fr;
+  }
+
+  .impact__visual {
+    min-height: 260px;
+  }
+
+  .impact__list {
+    grid-template-columns: 1fr;
+  }
+}

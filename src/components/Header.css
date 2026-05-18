@@ -4,13 +4,14 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  background-color: var(--color-background);
-  transition: all var(--transition-base);
+  background: rgb(250 246 240 / 0.82);
+  backdrop-filter: blur(12px);
+  transition: box-shadow var(--transition-base), border-color var(--transition-base);
   border-bottom: 1px solid transparent;
 }
 
 .header--scrolled {
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-sm);
   border-bottom-color: var(--color-border);
 }
 
@@ -18,14 +19,41 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--spacing-sm) 0;
+  padding: 0.85rem 0;
 }
 
-.header__logo h3 {
-  margin: 0;
-  color: var(--color-primary);
-  font-size: var(--font-size-xl);
+.header__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+}
+
+.header__logo-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: var(--radius-md);
+  background: var(--color-primary);
+  color: var(--color-background);
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-sm);
   font-weight: var(--font-weight-bold);
+  letter-spacing: 0.04em;
+}
+
+.header__logo-text {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  line-height: 1.1;
 }
 
 .header__nav {
@@ -59,8 +87,8 @@
 }
 
 @media (max-width: 768px) {
-  .header__logo h3 {
-    font-size: var(--font-size-lg);
+  .header__logo-text {
+    font-size: var(--font-size-base);
   }
 
   .header__mobile-toggle {
@@ -73,12 +101,13 @@
     left: 0;
     right: 0;
     flex-direction: column;
-    background-color: var(--color-background);
+    align-items: stretch;
+    background: var(--color-background);
     padding: var(--spacing-md);
-    gap: var(--spacing-sm);
+    gap: var(--spacing-xs);
     border-bottom: 1px solid var(--color-border);
     box-shadow: var(--shadow-lg);
-    transform: translateY(-100%);
+    transform: translateY(-110%);
     opacity: 0;
     visibility: hidden;
     transition: all var(--transition-base);

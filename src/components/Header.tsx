@@ -1,55 +1,57 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import './Header.css';
 
-const Header: React.FC = () => {
+const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsMobileMenuOpen(false);
-    }
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    setIsMobileMenuOpen(false);
   };
 
   return (
     <header className={`header ${isScrolled ? 'header--scrolled' : ''}`}>
       <div className="container">
         <div className="header__content">
-          <div className="header__logo">
-            <h3>Interlake Health Initiative</h3>
-          </div>
+          <button
+            type="button"
+            className="header__logo"
+            onClick={() => scrollToSection('home')}
+            aria-label="Interlake Health Initiative home"
+          >
+            <span className="header__logo-mark">IHI</span>
+            <span className="header__logo-text">Interlake Health</span>
+          </button>
 
           <nav className={`header__nav ${isMobileMenuOpen ? 'header__nav--open' : ''}`}>
-            <button onClick={() => scrollToSection('home')} className="nav-link">
+            <button type="button" onClick={() => scrollToSection('home')} className="nav-link">
               Home
             </button>
-            <button onClick={() => scrollToSection('about')} className="nav-link">
-              About
+            <button type="button" onClick={() => scrollToSection('impact')} className="nav-link">
+              Impact
             </button>
-            <button onClick={() => scrollToSection('programs')} className="nav-link">
+            <button type="button" onClick={() => scrollToSection('programs')} className="nav-link">
               Programs
             </button>
-            <button onClick={() => scrollToSection('contact')} className="nav-link">
+            <button type="button" onClick={() => scrollToSection('contact')} className="nav-link">
               Get Involved
             </button>
           </nav>
 
           <button
+            type="button"
             className="header__mobile-toggle"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Toggle mobile menu"
+            aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={isMobileMenuOpen}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>

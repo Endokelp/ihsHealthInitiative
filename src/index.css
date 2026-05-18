@@ -1,86 +1,80 @@
-/* Design System */
 :root {
-  /* Natural Color Palette - Medical/Healthcare theme */
-  --color-primary: #2563eb; /* Trust blue */
-  --color-primary-dark: #1e40af;
-  --color-primary-light: #3b82f6;
-  
-  --color-secondary: #10b981; /* Health green */
-  --color-secondary-dark: #059669;
-  --color-secondary-light: #34d399;
-  
-  --color-accent: #f59e0b; /* Warm accent */
-  --color-accent-dark: #d97706;
-  
-  /* Neutral colors */
-  --color-text-primary: #1f2937;
-  --color-text-secondary: #6b7280;
-  --color-text-light: #9ca3af;
-  
-  --color-background: #ffffff;
-  --color-background-alt: #f9fafb;
-  --color-background-accent: #eff6ff;
-  
-  --color-border: #e5e7eb;
-  --color-border-light: #f3f4f6;
-  
-  /* Typography Scale */
-  --font-family-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-  --font-family-heading: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-  
-  --font-size-xs: 0.75rem;     /* 12px */
-  --font-size-sm: 0.875rem;    /* 14px */
-  --font-size-base: 1rem;      /* 16px */
-  --font-size-lg: 1.125rem;    /* 18px */
-  --font-size-xl: 1.25rem;     /* 20px */
-  --font-size-2xl: 1.5rem;     /* 24px */
-  --font-size-3xl: 1.875rem;   /* 30px */
-  --font-size-4xl: 2.25rem;    /* 36px */
-  --font-size-5xl: 3rem;       /* 48px */
-  --font-size-6xl: 3.75rem;    /* 60px */
-  
+  --color-primary: #0c4a4e;
+  --color-primary-dark: #083538;
+  --color-primary-light: #1a6b70;
+
+  --color-secondary: #b85c38;
+  --color-secondary-dark: #944828;
+  --color-secondary-light: #d47852;
+
+  --color-accent: #e8c9a0;
+  --color-accent-muted: #f3e6d4;
+
+  --color-text-primary: #142828;
+  --color-text-secondary: #4a5f5f;
+  --color-text-light: #7a9090;
+
+  --color-background: #faf6f0;
+  --color-background-alt: #f0ebe3;
+  --color-background-accent: #e4f0f0;
+  --color-surface: #ffffff;
+
+  --color-border: #d9cfc2;
+  --color-border-light: #ebe4da;
+
+  --font-family-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-family-primary: 'Source Sans 3', system-ui, sans-serif;
+
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+  --font-size-6xl: 3.75rem;
+
   --font-weight-normal: 400;
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
-  
-  --line-height-tight: 1.25;
+
+  --line-height-tight: 1.2;
   --line-height-normal: 1.5;
   --line-height-relaxed: 1.75;
-  
-  /* Spacing System (8px base) */
-  --spacing-xs: 0.5rem;    /* 8px */
-  --spacing-sm: 1rem;      /* 16px */
-  --spacing-md: 1.5rem;    /* 24px */
-  --spacing-lg: 2rem;      /* 32px */
-  --spacing-xl: 3rem;      /* 48px */
-  --spacing-2xl: 4rem;     /* 64px */
-  --spacing-3xl: 6rem;     /* 96px */
-  
-  /* Layout */
-  --container-max-width: 1200px;
+
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-2xl: 4rem;
+  --spacing-3xl: 6rem;
+
+  --container-max-width: 1180px;
   --container-padding: var(--spacing-md);
-  
-  /* Border Radius */
+
   --radius-sm: 0.375rem;
-  --radius-md: 0.5rem;
-  --radius-lg: 0.75rem;
-  --radius-xl: 1rem;
-  
-  /* Shadows */
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
-  
-  /* Transitions */
-  --transition-fast: 150ms ease-in-out;
-  --transition-base: 200ms ease-in-out;
-  --transition-slow: 300ms ease-in-out;
+  --radius-md: 0.625rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
+
+  --shadow-sm: 0 1px 2px rgb(20 40 40 / 0.06);
+  --shadow-md: 0 8px 24px rgb(20 40 40 / 0.08);
+  --shadow-lg: 0 20px 48px rgb(20 40 40 / 0.12);
+  --shadow-layer: 0 32px 64px rgb(12 74 78 / 0.14);
+
+  --transition-fast: 150ms ease;
+  --transition-base: 220ms ease;
+  --transition-slow: 400ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* Reset & Base Styles */
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -101,9 +95,23 @@ body {
   min-width: 320px;
 }
 
-/* Typography Hierarchy */
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-family-heading);
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-display);
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-tight);
   color: var(--color-text-primary);
@@ -112,34 +120,20 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: var(--font-size-5xl);
-  font-weight: var(--font-weight-bold);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
 }
 
 h2 {
   font-size: var(--font-size-4xl);
-  font-weight: var(--font-weight-bold);
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
 }
 
 h3 {
   font-size: var(--font-size-3xl);
-  font-weight: var(--font-weight-semibold);
 }
 
 h4 {
   font-size: var(--font-size-2xl);
-  font-weight: var(--font-weight-semibold);
-}
-
-h5 {
-  font-size: var(--font-size-xl);
-  font-weight: var(--font-weight-medium);
-}
-
-h6 {
-  font-size: var(--font-size-lg);
-  font-weight: var(--font-weight-medium);
 }
 
 p {
@@ -155,23 +149,17 @@ a {
 }
 
 a:hover {
-  color: var(--color-primary-dark);
+  color: var(--color-secondary);
 }
 
-/* Responsive Typography */
 @media (max-width: 768px) {
   :root {
-    --font-size-5xl: 2.5rem;   /* 40px */
-    --font-size-4xl: 2rem;     /* 32px */
-    --font-size-3xl: 1.5rem;   /* 24px */
-  }
-  
-  html {
-    font-size: 14px;
+    --font-size-5xl: 2.35rem;
+    --font-size-4xl: 1.85rem;
+    --font-size-3xl: 1.45rem;
   }
 }
 
-/* Container */
 .container {
   width: 100%;
   max-width: var(--container-max-width);
@@ -179,35 +167,45 @@ a:hover {
   padding: 0 var(--container-padding);
 }
 
-/* Utility Classes */
-.text-center {
-  text-align: center;
-}
-
 .text-primary {
   color: var(--color-primary);
 }
 
-.text-secondary {
-  color: var(--color-text-secondary);
+.text-accent {
+  color: var(--color-secondary);
 }
 
-.font-semibold {
+.section-label {
+  display: inline-block;
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-xs);
   font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+  margin-bottom: var(--spacing-sm);
 }
 
-.font-bold {
-  font-weight: var(--font-weight-bold);
-}
-
-/* Focus styles for accessibility */
 *:focus-visible {
-  outline: 2px solid var(--color-primary);
-  outline-offset: 2px;
+  outline: 2px solid var(--color-secondary);
+  outline-offset: 3px;
 }
 
-/* Selection */
 ::selection {
-  background-color: var(--color-primary-light);
-  color: white;
+  background-color: var(--color-accent);
+  color: var(--color-text-primary);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
