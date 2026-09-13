@@ -25,10 +25,11 @@ const Footer = () => {
           <div className="footer__section">
             <p className="footer__heading">Navigate</p>
             <ul className="footer__links">
-              <li><a href="#home">Home</a></li>
-              <li><a href="#impact">Impact</a></li>
-              <li><a href="#programs">Programs</a></li>
-              <li><a href="#contact">Get Involved</a></li>
+              <li><a href="/#home">Home</a></li>
+              <li><a href="/#impact">Impact</a></li>
+              <li><a href="/#programs">Programs</a></li>
+              <li><a href="/partners">Partners</a></li>
+              <li><a href="/#contact">Get Involved</a></li>
             </ul>
           </div>
 

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import './Header.css';
 
@@ -13,6 +14,10 @@ const Header = () => {
   }, []);
 
   const scrollToSection = (id: string) => {
+    if (window.location.pathname !== '/') {
+      window.location.assign(`/#${id}`);
+      return;
+    }
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
     setIsMobileMenuOpen(false);
   };
@@ -41,6 +46,9 @@ const Header = () => {
             <button type="button" onClick={() => scrollToSection('programs')} className="nav-link">
               Programs
             </button>
+            <Link to="/partners" className="nav-link" onClick={() => setIsMobileMenuOpen(false)}>
+              Partners
+            </Link>
             <button type="button" onClick={() => scrollToSection('contact')} className="nav-link">
               Get Involved
             </button>
