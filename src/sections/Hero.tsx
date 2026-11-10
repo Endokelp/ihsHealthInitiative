@@ -43,12 +43,8 @@ const Hero = () => {
                 <span className="stat-layer__label">Families reached</span>
               </article>
               <article className="stat-layer stat-layer--mid">
-                <span className="stat-layer__value stat-layer__value--highlight">84</span>
+                <span className="stat-layer__value stat-layer__value--highlight">90</span>
                 <span className="stat-layer__label">Health kits assembled &amp; delivered</span>
-              </article>
-              <article className="stat-layer stat-layer--front">
-                <span className="stat-layer__value">20+</span>
-                <span className="stat-layer__label">Healthcare mentors engaged</span>
               </article>
             </div>
           </div>

@@ -15,8 +15,10 @@ const Impact = () => (
         <div className="impact__kit impact__kit--layer-3" aria-hidden="true" />
         <div className="impact__kit impact__kit--layer-2" aria-hidden="true" />
         <div className="impact__kit impact__kit--layer-1">
-          <span className="impact__kit-count">84</span>
-          <span className="impact__kit-label">kits delivered</span>
+          <span className="impact__kit-badge">
+            <span className="impact__kit-count">90</span>
+            <span className="impact__kit-label">kits delivered</span>
+          </span>
         </div>
       </div>
 
@@ -25,7 +27,7 @@ const Impact = () => (
         <h2>Every kit is built layer by layer</h2>
         <p>
           From sourcing supplies to packing and handoff, our team has assembled and delivered
-          <strong> 84 complete health kits</strong> to families across the Interlake — each one
+          <strong> 90 complete health kits</strong> to families across the Interlake — each one
           stocked with practical items and clear, community-focused guidance.
         </p>
         <ul className="impact__list">

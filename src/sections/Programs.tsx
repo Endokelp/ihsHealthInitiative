@@ -1,6 +1,6 @@
 import Section from '../components/Section';
 import Card from '../components/Card';
-import { Package, Megaphone, UserCheck, Microscope, Instagram } from 'lucide-react';
+import { Package, Megaphone, UserCheck, Microscope } from 'lucide-react';
 import './Programs.css';
 
 const programs = [
@@ -9,7 +9,7 @@ const programs = [
     title: 'Health Kit Distribution',
     description:
       'Regular drives to collect, assemble, and deliver essential supplies — first-aid materials, hygiene products, and educational resources — to families who need them.',
-    impact: '84 kits delivered to local families',
+    impact: '90 kits delivered to local families',
   },
   {
     icon: <Megaphone size={36} strokeWidth={1.5} />,
@@ -17,13 +17,6 @@ const programs = [
     description:
       'Flyers, posters, and digital content on preventive health, nutrition, mental wellness, and disease awareness — designed for real community conversations.',
     impact: '500+ community members reached',
-  },
-  {
-    icon: <Instagram size={36} strokeWidth={1.5} />,
-    title: 'Social Media Outreach',
-    description:
-      'Active Instagram and TikTok channels sharing practical health tips and warnings that resonate with younger audiences and busy households.',
-    impact: 'Growing regional following',
   },
   {
     icon: <Microscope size={36} strokeWidth={1.5} />,
@@ -37,7 +30,6 @@ const programs = [
     title: 'Professional Mentorship',
     description:
       'Experienced clinicians and health workers lead workshops and speaking events, sharing guidance with members and the wider community.',
-    impact: '20+ professionals engaged',
   },
 ];
 
@@ -58,7 +50,7 @@ const Programs = () => (
             <div className="program-card__icon">{program.icon}</div>
             <h3 className="program-card__title">{program.title}</h3>
             <p className="program-card__description">{program.description}</p>
-            <p className="program-card__impact">{program.impact}</p>
+            {program.impact && <p className="program-card__impact">{program.impact}</p>}
           </Card>
         ))}
       </div>
@@ -66,7 +58,7 @@ const Programs = () => (
       <aside className="programs__cta">
         <h3>Support the next kit drive</h3>
         <p>
-          Volunteers, clinics, and donors help us scale from 84 kits toward even more families
+          Volunteers, clinics, and donors help us scale from 90 kits toward even more families
           across the Interlake.
         </p>
       </aside>

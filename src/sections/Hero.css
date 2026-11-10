@@ -97,7 +97,7 @@
 
 .hero__card-stack {
   position: relative;
-  min-height: 380px;
+  min-height: 280px;
   margin-left: auto;
   max-width: 380px;
 }
@@ -122,19 +122,12 @@
 }
 
 .stat-layer--mid {
-  top: 28%;
+  top: 38%;
   left: 18%;
   transform: rotate(2deg);
   z-index: 3;
   border-color: var(--color-primary-light);
   box-shadow: var(--shadow-layer);
-}
-
-.stat-layer--front {
-  bottom: 0;
-  right: 0;
-  transform: rotate(-2deg);
-  z-index: 2;
 }
 
 .stat-layer__value {
@@ -175,7 +168,7 @@
   .hero__card-stack {
     margin-left: 0;
     max-width: none;
-    min-height: 340px;
+    min-height: 260px;
   }
 }
 

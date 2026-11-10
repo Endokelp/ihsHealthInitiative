@@ -1,12 +1,7 @@
-import { Instagram, Mail } from 'lucide-react';
-import TikTokIcon from './TikTokIcon';
+import { Mail } from 'lucide-react';
 import './Footer.css';
 
-const SOCIAL = {
-  instagram: 'https://www.instagram.com/interlake_health_initiative/',
-  tiktok: 'https://www.tiktok.com/@interlake_health_',
-  email: 'mailto:Interlakehealthinitiative@gmail.com',
-} as const;
+const EMAIL = 'mailto:Interlakehealthinitiative@gmail.com';
 
 const Footer = () => {
   const year = new Date().getFullYear();
@@ -36,23 +31,7 @@ const Footer = () => {
           <div className="footer__section">
             <p className="footer__heading">Connect</p>
             <div className="footer__social">
-              <a
-                href={SOCIAL.instagram}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Instagram"
-              >
-                <Instagram size={22} />
-              </a>
-              <a
-                href={SOCIAL.tiktok}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="TikTok"
-              >
-                <TikTokIcon size={22} />
-              </a>
-              <a href={SOCIAL.email} aria-label="Email">
+              <a href={EMAIL} aria-label="Email">
                 <Mail size={22} />
               </a>
             </div>

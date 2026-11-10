@@ -20,6 +20,8 @@ interface Partner {
   role: string;
   url: string;
   descriptions: Record<Lang, string>;
+  photo?: { src: string; alt: string };
+  goal?: Record<Lang, string>;
 }
 
 const partners: Partner[] = [
@@ -67,6 +69,17 @@ const partners: Partner[] = [
     name: 'Connections Kirkland',
     role: 'Youth behavioral health',
     url: 'https://connectionshs.com/kirkland',
+    photo: {
+      src: '/images/connections-kirkland.jpg',
+      alt: 'Two people shaking hands outside the Connections Kirkland building',
+    },
+    goal: {
+      en: 'Our goal is to bring mental health resources to a majority of high schools in King County.',
+      es: 'Nuestra meta es llevar recursos de salud mental a la mayoría de las escuelas secundarias del condado de King.',
+      zh: '我們的目標是將心理健康資源帶進金郡大多數的高中。',
+      hi: 'हमारा लक्ष्य किंग काउंटी के अधिकांश हाई स्कूलों तक मानसिक स्वास्थ्य संसाधन पहुँचाना है।',
+      so: 'Hadafkayagu waa inaan agabka caafimaadka maskaxda gaarsiino inta badan dugsiyada sare ee Degmada King.',
+    },
     descriptions: {
       en: 'Interlake Health Initiative and Connections Kirkland work together to make mental health support more accessible and affordable for youth in our community, regardless of their background or insurance status. Our goal is to connect young people with comprehensive behavioral health services that support them throughout their journey, all in one location.',
       es: 'Interlake Health Initiative y Connections Kirkland trabajan juntos para hacer que el apoyo de salud mental sea más accesible y asequible para los jóvenes de nuestra comunidad, sin importar su origen o si tienen seguro médico. Nuestro objetivo es conectar a los jóvenes con servicios integrales de salud conductual que los apoyen durante todo su proceso, en un solo lugar.',
@@ -111,14 +124,21 @@ const Partners = () => {
         <div className="partners__grid">
           {partners.map((partner) => (
             <Card key={partner.name} hover className="partner-card">
-              <div className="partner-card__photo">
-                <Camera size={20} strokeWidth={1.5} />
-                <span>Photos coming soon</span>
+              <div className={`partner-card__photo ${partner.photo ? 'partner-card__photo--filled' : ''}`}>
+                {partner.photo ? (
+                  <img src={partner.photo.src} alt={partner.photo.alt} loading="lazy" />
+                ) : (
+                  <>
+                    <Camera size={20} strokeWidth={1.5} />
+                    <span>Photos coming soon</span>
+                  </>
+                )}
               </div>
               <div className="partner-card__badge">{partner.initials}</div>
               <h3 className="partner-card__name">{partner.name}</h3>
               <p className="partner-card__role">{partner.role}</p>
               <p className="partner-card__description">{partner.descriptions[lang]}</p>
+              {partner.goal && <p className="partner-card__goal">{partner.goal[lang]}</p>}
               <a
                 className="partner-card__link"
                 href={partner.url}

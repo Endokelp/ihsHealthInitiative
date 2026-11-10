@@ -70,6 +70,27 @@
   font-size: var(--font-size-sm);
 }
 
+.partner-card__photo--filled {
+  height: 190px;
+  border-bottom: 0;
+}
+
+.partner-card__photo--filled img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.partner-card__goal {
+  margin-bottom: var(--spacing-md);
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--color-background-accent);
+  border-left: 3px solid var(--color-secondary);
+  border-radius: var(--radius-md);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-primary);
+}
+
 .partner-card__badge {
   display: flex;
   align-items: center;

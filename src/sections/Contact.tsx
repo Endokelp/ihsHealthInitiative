@@ -1,15 +1,10 @@
 import Section from '../components/Section';
 import Button from '../components/Button';
 import Card from '../components/Card';
-import TikTokIcon from '../components/TikTokIcon';
-import { Mail, Users, HandHeart, Calendar, Instagram } from 'lucide-react';
+import { Mail, Users, HandHeart, Calendar } from 'lucide-react';
 import './Contact.css';
 
 const EMAIL = 'Interlakehealthinitiative@gmail.com';
-const SOCIAL = {
-  instagram: 'https://www.instagram.com/interlake_health_initiative/',
-  tiktok: 'https://www.tiktok.com/@interlake_health_',
-} as const;
 
 const Contact = () => (
   <Section id="contact" background="accent">
@@ -68,24 +63,6 @@ const Contact = () => (
               <div>
                 <strong>Email</strong>
                 <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
-              </div>
-            </li>
-            <li className="contact-info-item">
-              <Instagram size={22} strokeWidth={1.5} />
-              <div>
-                <strong>Instagram</strong>
-                <a href={SOCIAL.instagram} target="_blank" rel="noopener noreferrer">
-                  @interlake_health_initiative
-                </a>
-              </div>
-            </li>
-            <li className="contact-info-item">
-              <TikTokIcon size={22} />
-              <div>
-                <strong>TikTok</strong>
-                <a href={SOCIAL.tiktok} target="_blank" rel="noopener noreferrer">
-                  @interlake_health_
-                </a>
               </div>
             </li>
           </ul>

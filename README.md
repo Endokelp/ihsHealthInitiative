@@ -18,7 +18,7 @@ npm run preview
 
 ## Site structure
 
-- **Hero** — mission statement and layered impact stats (including **84 health kits** delivered)
+- **Hero** — mission statement and layered impact stats (including **90 health kits** delivered)
 - **Impact** — kit program highlight and contents
 - **Programs** — initiatives and outreach
 - **Contact** — volunteer, partner, and event information
